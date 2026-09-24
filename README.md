@@ -1,2 +1,2 @@
 # Ouroboros
-ggs fucking easy
+ggs fucking easy, now open source
