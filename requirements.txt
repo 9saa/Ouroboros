@@ -1,0 +1,14 @@
+# Ouroboros V0.2.2 runtime dependencies
+# Install with: pip install -r requirements.txt
+
+# HTTP client with HTTP/2, brotli, and zstd support.
+# - http2 pulls in `h2` for HTTP/2 framing (used against hexium.zip)
+# - brotli decodes `content-encoding: br` responses from Cloudflare
+# - zstd decodes `content-encoding: zstd` responses (also seen from Cloudflare)
+httpx[http2,brotli,zstd]>=0.27.0
+
+# Nessecary: enables `//` and `/* */` comments in settings.json.
+# Only not needed if you want no comments in the config files. The hub works fine
+# without it, but you have to remove all the current existing comments.
+# Install with: pip install json5 (or pip install -r requirements.txt while in directory)
+json5>=0.9.14
